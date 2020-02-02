@@ -28,7 +28,10 @@ def structure_loss(pred, mask):
 
 def train(Dataset, Network):
     ## dataset
-    cfg    = Dataset.Config(datapath='../data/DUTS', savepath='./out', mode='train', batch=32, lr=0.05, momen=0.9, decay=5e-4, epoch=32)
+    # This is author's original
+    # cfg    = Dataset.Config(datapath='../data/DUTS', savepath='./out', mode='train', batch=32, lr=0.05, momen=0.9, decay=5e-4, epoch=32)
+    # This is kareza set batch.
+    cfg    = Dataset.Config(datapath='../data/DUTS', savepath='./out', mode='train', batch=5, lr=0.05, momen=0.9, decay=5e-4, epoch=32)
     data   = Dataset.Data(cfg)
     loader = DataLoader(data, collate_fn=data.collate, batch_size=cfg.batch, shuffle=True, num_workers=8)
     ## network
