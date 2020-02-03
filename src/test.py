@@ -63,7 +63,7 @@ class Test(object):
 
 
 if __name__=='__main__':
-    for path in ['../data/ECSSD', '../data/PASCAL-S', '../data/DUTS', '../data/HKU-IS', '../data/DUT-OMRON']:
+    for path in ['../data/ECSSD', '../data/PASCAL-S', '../data/DUTS', '../data/HKU-IS', '../data/DUT-OMRON', '../data/LEEDS-BUTTERFLY']:
         t = Test(dataset, F3Net, path)
         t.save()
         # t.show()
